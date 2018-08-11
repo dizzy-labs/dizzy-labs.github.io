@@ -1,0 +1,146 @@
+
+/* base */
+html {
+	font-size: 18px;
+}
+}
+* {
+	box-sizing: border-box;
+}
+body {
+	background-color: dimgray;
+	color: white;
+	font-family: Verdana;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #2b90d9;
+	font-weight: bold;
+	font-family: monospace;
+}
+a:hover {
+	color: deepskyblue;
+}
+a::before {
+	content: "💫";
+}
+a::after {
+	content: "✨";
+}
+
+/* layout */
+
+#contents::after {
+	content: " ";
+	display: block;
+	clear: both;
+}
+#top-nav {
+	width: 100%;
+	height: 5vh;
+	background: linear-gradient(135deg, #282c37 0%,#282c37 69%,#2b90d9 70%,#282c37 71%,#282c37 71%,#26558b 89%,#2b90d9 92%,#3a84c3 92%);
+	border-bottom: 2px inset #2b90d9;
+	display:flex;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 20px;
+}
+.flex-wrapper-col {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+.flex-wrapper-row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+
+/* modules */
+
+.button {
+	cursor: pointer;
+	color: white;
+	text-shadow: 1px 1px #282c37;
+	height: 2em;
+	border: 2px ouset #2b90d9;
+	border-radius: .5em;
+	background: linear-gradient(45deg, #2b90d9 0%,#282c37 69%,#2b90d9 70%,#282c37 71%,#282c37 71%,#26558b 89%,#2b90d9 92%,#3a84c3 92%)
+}
+.content {
+	min-height: 100vh;
+	width: 100%;
+	text-align: center;
+	background: linear-gradient(to bottom, #282c37 0%,#282c37 54%,#282c37 83%,#2b90d9 83%,#282c37 86%,#282c37 86%,#282c37 88%,#26558b 96%,#26558b 100%,#2b90d9);
+}
+
+.card {
+	display: inline-block;
+	height: 360px;
+	width: 240px;
+	background-color: whitesmoke;
+	margin: 1em;
+	box-shadow: 7px 6px 12px 0px #111;
+	border-radius: .5em;
+	overflow: hidden;
+}
+.card__image {
+	min-width: 100%;
+	height: 240px;
+	background: #333;
+}
+.card__image--px-art {
+	image-rendering: pixelated;
+	image-rendering: -moz-crisp-edges;
+	-ms-interpolation-mode: nearest-neighbor;
+}
+.card__title {
+	font-weight: bold;
+	color: #2b90d9;
+	margin: 0 0 .5em 0;
+	display: block;
+	font-size: 20px;
+	text-align: center;
+}
+.card__text {
+	display: block;
+	font-size: 16px;
+	padding: .5em;
+	text-align: left;
+	color: #26558b;
+}
+.clickable {
+	cursor: pointer;
+}
+
+
+/* THEMING */
+.vapor-theme {
+	color: floralwhite;
+	text-shadow: -1px -1px 2px #f990ca,
+								1px 1px 2px #90caf9;
+}
+.vapor-theme a {
+	color: #caf990;
+}
+@keyframes vapor-gradient {
+	0% {
+		background-position: 0% 50%;
+		background-size: 400%
+	}
+	50% {
+		background-position: 100% 50%;
+		background-size: 500%;
+	}
+	100%{
+		background-position: 0% 50%;
+		background-size: 400%;
+	}
+}
+.vapor-theme--bg {
+	background: linear-gradient(90deg, #90CAF9, #f990ca, #90caf9);
+	animation: vapor-gradient 24s linear infinite;
+}

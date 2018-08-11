@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Pico8 Library</title>
+		<link href="/assets/css/style.css" rel="stylesheet" type="text/css" media="all">
+		<link href="/assets/css/pico8-lib.css" rel="stylesheet" type="text/css" media="all">
+	</head>
+	<body>
+		<nav id="top-nav">
+			<a href="https://mcmeme-enterprises.neocities.org/"> Home </a>
+		</nav>
+		<div id="contents">
+			<div id="player-modal" class="modal">
+				<div id="modal-overlay"></div>
+				<div id="modal-content" class="flex-wrapper-col">
+					<button id="modal-close" class=".button" onclick="closePico8();">CLOSE PICO8</button>
+				</div>
+			</div>
+
+			<div id="game-library" class="content">
+				<span>Click a game to open it in a pico-8 player! All games on this page are released under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Licence.</a></span>
+				<noscript>Uhhhhhhh sorry but you'll need javascript to play pico8 games in your browser.</noscript>
+				<div id="cart-shelf">
+					<div class="card clickable" id="spaceshooter_aleph" onclick="openPico8('spaceshooter_aleph');">
+						<img class="card__image card__image--px-art" src="/assets/pico8-library/spaceshooter_aleph.p8.png" title="Spaceshooter Aleph by Vann">
+						<a href="https://www.lexaloffle.com/bbs/?pid=41638#p41649" onclick="noEventBubble(event);">Open Pico-8 BBS thread</a>
+					</div>
+
+					<div class="card clickable" id="slime-factory" onclick="openPico8('slime_factory');">
+						<img class="card__image card__image--px-art" src="/assets/pico8-library/slime_factory.p8.png" title="Slime Factory by Vann">
+						<a href="https://www.lexaloffle.com/bbs/?pid=42292#p42291" onclick="noEventBubble(event);">Open Pico-8 BBS thread</a>
+					</div>
+
+					<div class="card clickable" id="pattybrawl8" onclick="openPico8('pattybrawl8');">
+						<img class="card__image card__image--px-art" src="/assets/pico8-library/pattybrawl8.p8.png" title="PattyBrawl8 by Vann">
+					</div>
+
+					<div class="card clickable" id="hike" onclick="openPico8('hike');">
+						<img class="card__image card__image--px-art" src="/assets/pico8-library/hike.p8.png" title="Two Hiking Cats Have An In Depth Discussion About Life The Universe And Everythi by solar">
+						<a href="https://www.lexaloffle.com/bbs/?pid=16152#p16151" onclick="noEventBubble(event);">Open Pico-8 BBS thread</a>
+					</div>
+
+					<div class="card clickable" id="karaoke" onclick="openPico8('karaoke');">
+						<img class="card__image card__image--px-art" src="/assets/pico8-library/karaoke.p8.png" title="Cartoon Cat Karaoke by solar">
+						<a href="https://www.lexaloffle.com/bbs/?pid=31029#p31028" onclick="noEventBubble(event);">Open Pico-8 BBS thread</a>
+					</div>
+
+					<div class="card clickable" id="shodo" onclick="openPico8('shodo');">
+						<img class="card__image card__image--px-art" src="/assets/pico8-library/shodo.p8.png" title="Shodo by oinariman">
+						<a href="https://www.lexaloffle.com/bbs/?pid=11020#p22602" onclick="noEventBubble(event);">Open Pico-8 BBS thread</a>
+					</div>
+
+					<div class="card clickable" id="pico_racer" onclick="openPico8('pico_racer');">
+						<img class="card__image card__image--px-art" src="/assets/pico8-library/pico_racer.p8.png" title="Pico Racer by kometbomb">
+						<a href="https://www.lexaloffle.com/bbs/?pid=19673#p20068" onclick="noEventBubble(event);">Open Pico-8 BBS thread</a>
+					</div>
+
+					<div class="card clickable" id="marballs2" onclick="openPico8('marballs2');">
+						<img class="card__image card__image--px-art" src="/assets/pico8-library/marballs2.p8.png" title="Marballs 2 by lucatron">
+						<a href="https://www.lexaloffle.com/bbs/?pid=34773#p46032" onclick="noEventBubble(event);">Open Pico-8 BBS thread</a>
+					</div>
+
+					<div class="card clickable" id="pico8_tunes_vol1" onclick="openPico8('pico8_tunes_vol1');">
+						<img class="card__image card__image--px-art" src="/assets/pico8-library/pico8_tunes_vol1.p8.png" title="Pico-8 Tunes Volume 1 by Gruber and krajzeg">
+						<a href="https://www.lexaloffle.com/bbs/?pid=38442#p38440" onclick="noEventBubble(event);">Open Pico-8 BBS thread</a>
+					</div>
+
+					<div class="card clickable" id="9_songs_in_pico8" onclick="openPico8('9_songs_in_pico8');">
+						<img class="card__image card__image--px-art" src="/assets/pico8-library/9_songs_in_pico8.p8.png" title="Nine Songs in Pico-8 by Robby Duguay">
+						<a href="https://www.lexaloffle.com/bbs/?pid=15487#p16503" onclick="noEventBubble(event);">Open Pico-8 BBS thread</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+
+		function noEventBubble(event) {
+			event.cancelBubble = true;
+			if(event.stopPropagation){
+				event.stopPropagation();
+			}
+		}
+		function openPico8(gameName) {
+			var modalContent = document.getElementById("modal-content");
+			var player = document.createElement("iframe");
+			player.src = "/assets/pico8-library/"+gameName+".html";
+			player.id = "p8-player";
+			modalContent.appendChild(player);
+			document.getElementById("player-modal").style.display = "block";
+
+			console.log("Chose:	" + gameName );
+		}
+		function closePico8() {
+			var modal = document.getElementById("player-modal");
+			var player = document.getElementById("p8-player");
+			var modalContent = document.getElementById("modal-content");
+			modalContent.removeChild(player);
+			modal.style.display = "none";
+		}
+	</script>
+</html>
