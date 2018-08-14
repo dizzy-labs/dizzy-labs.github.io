@@ -7,9 +7,11 @@
 	color: whitesmoke;
 	padding: 0 0 .5em 0;
 	font-size: .777em;
-	width: 240px
+	width: 240px;
+	height: 360px;
 }
 .card > a {
+	position: absolute;
 	margin: .5em;
 	bottom: 0;
 	left: 0;
