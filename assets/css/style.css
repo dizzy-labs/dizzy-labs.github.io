@@ -74,7 +74,7 @@ a::after {
 }
 .content {
 	min-height: 100vh;
-	padding: 2em;
+
 	text-align: center;
 	background: linear-gradient(to bottom, #282c37 0%,#282c37 54%,#282c37 83%,#2b90d9 83%,#282c37 86%,#282c37 86%,#282c37 88%,#26558b 96%,#26558b 100%,#2b90d9);
 }
