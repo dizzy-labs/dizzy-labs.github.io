@@ -1,2 +1,2 @@
 # dizzy-website
-Source for https://dizzy-labs.neocities.org/
+Source for my github pagees site https://dizzy-labs.github.io
