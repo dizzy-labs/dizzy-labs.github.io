@@ -49,28 +49,42 @@ a::after {
 	align-items: center;
 	font-size: 20px;
 }
-.flex-wrapper-col {
+.flex {
 	display: flex;
+}
+.flex--center {
+	justify-content: center;
+	align-items: center;
+}
+.flex--wrap-col {
 	flex-direction: column;
 	flex-wrap: wrap;
 }
-.flex-wrapper-row {
-	display: flex;
+.flex--wrap-row {
 	flex-direction: row;
 	flex-wrap: wrap;
 }
-
-
 /* modules */
 
 .button {
+	transition: all .1s ease-in-out;
+	display: inline-block;
 	cursor: pointer;
 	color: white;
-	text-shadow: 1px 1px #282c37;
-	height: 2em;
-	border: 2px ouset #2b90d9;
+	text-shadow: 1px 1px 2px #333;
+	font-size: 16px;
+	min-height: 48px;
+	min-width: 48px;
+	margin: 4px;
+	border: 1px solid #222;
 	border-radius: .5em;
-	background: linear-gradient(45deg, #2b90d9 0%,#282c37 69%,#2b90d9 70%,#282c37 71%,#282c37 71%,#26558b 89%,#2b90d9 92%,#3a84c3 92%)
+	background: #333;
+	box-shadow: 0px 2px 4px 0px #1a1a1a;
+}
+.button:hover,
+.button:focus {
+	box-shadow: 0px 4px 8px 0px #1a1a1a;
+	transform: translateY(-2px);
 }
 .content {
 	min-height: 100vh;
@@ -117,6 +131,18 @@ a::after {
 	cursor: pointer;
 }
 
+.flex-item {
+	flex: 0 0 auto;
+}
+.flex-item--fit {
+	flex: 1 1 auto;
+}
+.flex-item--grow {
+	flex: 0 1 auto;
+}
+.flex-item--shrink {
+	flex: 1 0 auto;
+}
 
 /* THEMING */
 .vapor-theme {
