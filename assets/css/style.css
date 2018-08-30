@@ -24,8 +24,9 @@ a {
 	font-weight: bold;
 	font-family: monospace;
 }
-a:hover {
-	color: #1D2B53;
+a:hover,
+a:focus{
+	color: #00e436;
 }
 a::before {
 	content: "💫";
