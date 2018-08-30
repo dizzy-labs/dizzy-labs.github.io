@@ -11,20 +11,21 @@ html {
 	box-sizing: border-box;
 }
 body {
-	background-color: dimgray;
-	color: white;
+	background-color: #5f574f;
+	color: #fff1e8;
 	font-family: Verdana;
 	margin: 0;
+	padding: 4px;
 }
 
 a {
 	text-decoration: none;
-	color: #2b90d9;
+	color: #29ADFF;
 	font-weight: bold;
 	font-family: monospace;
 }
 a:hover {
-	color: deepskyblue;
+	color: #1D2B53;
 }
 a::before {
 	content: "💫";
@@ -89,17 +90,17 @@ a::after {
 }
 .content {
 	min-height: 100vh;
-
+	max-width: 1333px;
 	text-align: center;
 	background: linear-gradient(to bottom, #282c37 0%,#282c37 54%,#282c37 83%,#2b90d9 83%,#282c37 86%,#282c37 86%,#282c37 88%,#26558b 96%,#26558b 100%,#2b90d9);
 }
 
 .card {
 	display: inline-block;
-	height: 440px;
-	width: 330px;
-	background-color: whitesmoke;
-	margin: 1em;
+	height: 430px;
+	width: 310px;
+	background-color: #fff1e8;
+	margin: 8px;
 	box-shadow: 7px 6px 12px 0px #111;
 	border-radius: .5em;
 	overflow: hidden;
@@ -115,18 +116,18 @@ a::after {
 }
 .card__title {
 	font-weight: bold;
-	color: #2b90d9;
-	margin: 0 0 .5em 0;
+	color: #29ADFF;
+	margin: 0 0 4px 0;
 	display: block;
-	font-size: 20px;
+	font-size: 22px;
 	text-align: center;
 }
 .card__text {
 	display: block;
-	font-size: 16px;
-	padding: .5em;
+	font-size: 18px;
+	padding: 4px 16px 4px 16px;
 	text-align: left;
-	color: #26558b;
+	color: #1D2B53;
 }
 .colors {
 	background: #111;
@@ -164,12 +165,11 @@ a::after {
 }
 /* THEMING */
 .vapor-theme {
-	color: floralwhite;
-	text-shadow: -1px -1px 2px #f990ca,
-								1px 1px 2px #90caf9;
+	color: #fff1e8;
+	text-shadow: 0 0 0.25em rgba(126,37,83,.55);
 }
 .vapor-theme a {
-	color: #caf990;
+	color: #FFEC27;
 }
 @keyframes vapor-gradient {
 	0% {
@@ -186,6 +186,6 @@ a::after {
 	}
 }
 .vapor-theme--bg {
-	background: linear-gradient(90deg, #90CAF9, #f990ca, #90caf9);
+	background: linear-gradient(90deg, #29ADFF, #FF77A8, #29ADFF);
 	animation: vapor-gradient 24s linear infinite;
 }
