@@ -15,7 +15,7 @@ body {
 	color: #fff1e8;
 	font-family: Verdana;
 	margin: 0;
-	padding: 4px;
+	background: linear-gradient(to bottom, #282c37 0%,#282c37 54%,#282c37 83%,#2b90d9 83%,#282c37 86%,#282c37 86%,#282c37 88%,#26558b 96%,#26558b 100%,#2b90d9);
 }
 
 a {
@@ -92,7 +92,8 @@ a::after {
 	min-height: 100vh;
 	max-width: 1333px;
 	text-align: center;
-	background: linear-gradient(to bottom, #282c37 0%,#282c37 54%,#282c37 83%,#2b90d9 83%,#282c37 86%,#282c37 86%,#282c37 88%,#26558b 96%,#26558b 100%,#2b90d9);
+	margin: auto;
+	padding: 4px;
 }
 
 .card {
