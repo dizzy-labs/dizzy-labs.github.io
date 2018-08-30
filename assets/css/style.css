@@ -89,7 +89,6 @@ a::after {
 	transform: translateY(-2px);
 }
 .content {
-	min-height: 100vh;
 	max-width: 1333px;
 	text-align: center;
 	margin: auto;
