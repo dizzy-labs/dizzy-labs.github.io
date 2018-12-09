@@ -1,2 +1,2 @@
 # dizzy-website
-Source for my github pagees site https://dizzy-labs.github.io
+Source for my github pages site https://dizzy-labs.github.io
