@@ -39,6 +39,7 @@ class GameLibrary extends Component {
   render () {
     const carts = this.props.games.map((game, index) =>
       <GameCart key={index}
+        handleOpenGame={this.openGame}
         gameName={game.name}
         author={game.author}
         cartImage={game.image}
@@ -66,8 +67,12 @@ class GameLibrary extends Component {
 }
 function GameCart (props) {
   return (
-    <div className='card clickable'
-      onClick={props.handleClick} >
+    <div tabIndex={0} role='button' className='card clickable'
+      onClick={props.handleOpenGame}
+      onKeyPress={
+        (e) => {
+          if (e.which === 32) { props.handleOpenGame() }
+        }} >
       <img className='card__image card__image--px-art'
         src={props.cartImage}
         title={`${props.gameName} by ${props.author}`}
