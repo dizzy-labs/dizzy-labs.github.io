@@ -8,8 +8,8 @@
     "bundle": "react-static bundle",
     "export": "react-static export",
     "serve": "serve dist -p 3000",
-    "test": "eslint ./src/*.js ./src/pages/*.js ./src/containers/*.js",
-    "lint": "eslint --fix ./src/*.js ./src/pages/*.js ./src/containers/*.js"
+    "test": "eslint ./src/*.js ./src/pages/*.js",
+    "lint": "eslint --fix ./src/*.js ./src/pages/*.js"
   },
   "dependencies": {
     "@reach/router": "^1.2.1",
