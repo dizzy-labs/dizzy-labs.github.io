@@ -7,11 +7,10 @@ import './app.css'
 function App () {
   return (
     <Root>
-      {/* anything to be on every page goes here
+      {
+      /* anything to be on every page goes here
       <nav>
-        <Link to='/'>Home</Link>
-        <Link to='/about'>About</Link>
-        <Link to='/blog'>Blog</Link>
+        <Link to='/'>Back to Home</Link>
       </nav>
       */
       }

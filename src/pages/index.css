@@ -29,10 +29,10 @@ a:focus{
 	color: #00e436;
 }
 a::before {
-	content: "💫";
+	content: " 💫 ";
 }
 a::after {
-	content: "✨";
+	content: " ✨ ";
 }
 
 /* layout */
