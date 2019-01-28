@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { withSiteData } from 'react-static'
 // import { Link } from '@reach/router'
 import './index.css'
+
 const charaEmojo = [
   {
     url: '/assets/emojos/alien_blue.png',
@@ -124,7 +125,7 @@ const foodEmojo = [
     alt: 'a pixel art bowl of rice',
     shortcode: ':rice:',
     description: 'A bowl of rice from Slime Factory'
-  },
+  }
 ]
 const miscEmojo = [
   {
@@ -197,15 +198,15 @@ const miscEmojo = [
 ]
 const emojoData = [
   {
-    title: "Characters and Creatures",
+    title: 'Characters and Creatures',
     emojos: charaEmojo
   },
   {
-    title: "Food and Beverages",
+    title: 'Food and Beverages',
     emojos: foodEmojo
   },
   {
-    title: "Miscellaneous",
+    title: 'Miscellaneous',
     emojos: miscEmojo
   }
 ]
@@ -217,8 +218,8 @@ class EmojosLibrary extends Component {
   render () {
     const emojoData = this.props.emojos
     const sections = []
-    emojoData.forEach( (section) => {
-      let emojos = section.emojos.map((emojo, index) =>
+    emojoData.forEach((section) => {
+      const emojos = section.emojos.map((emojo, index) =>
         <EmojoCard key={index}
           url={emojo.url}
           alt={emojo.alt}
