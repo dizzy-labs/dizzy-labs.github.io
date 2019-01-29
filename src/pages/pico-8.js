@@ -56,9 +56,11 @@ function GameCart (props) {
         src={props.cartImage}
         title={`${props.gameName} by ${props.author}`}
         alt={`${props.gameName} by ${props.author}`} />
-      <a href={props.bbsLink} >
-        Open Pico-8 BBS thread
-      </a>
+      { (props.bbsLink) ?
+        <a href={props.bbsLink} >
+          Open Pico-8 BBS thread
+        </a> : ""
+      }
     </div>
   )
 }

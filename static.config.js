@@ -203,13 +203,13 @@ export default {
         name: 'Spaceshooter Aleph',
         author: 'dizzy-labs',
         image: '/assets/pico8-assets/spaceshooter_aleph.p8.png',
-        bbsLink: ''
+        bbsLink: 'https://www.lexaloffle.com/bbs/?pid=41638#p41649'
       },
       {
         name: 'Slime Factory',
         author: 'dizzy-labs',
         image: '/assets/pico8-assets/slime_factory.p8.png',
-        bbsLink: ''
+        bbsLink: 'https://www.lexaloffle.com/bbs/?pid=42292#p42291'
       },
       {
         name: 'Patty Brawl 8',
@@ -221,43 +221,43 @@ export default {
         name: 'Hike',
         author: 'Solar',
         image: '/assets/pico8-assets/hike.p8.png',
-        bbsLink: ''
+        bbsLink: 'https://www.lexaloffle.com/bbs/?pid=16152#p16151'
       },
       {
         name: 'Karaoke',
         author: 'Solar',
         image: '/assets/pico8-assets/karaoke.p8.png',
-        bbsLink: ''
+        bbsLink: 'https://www.lexaloffle.com/bbs/?pid=31029#p31028'
       },
       {
         name: 'Shodo',
         author: 'oinariman',
         image: '/assets/pico8-assets/shodo.p8.png',
-        bbsLink: ''
+        bbsLink: 'https://www.lexaloffle.com/bbs/?pid=11020#p22602'
       },
       {
         name: 'PICO Racer',
         author: 'Kometbomb',
         image: '/assets/pico8-assets/pico_racer.p8.png',
-        bbsLink: ''
+        bbsLink: 'https://www.lexaloffle.com/bbs/?pid=19673#p20068'
       },
       {
         name: 'Marballs 2',
         author: 'Lucatron',
         image: '/assets/pico8-assets/marballs2.p8.png',
-        bbsLink: ''
+        bbsLink: 'https://www.lexaloffle.com/bbs/?pid=34773#p46032'
       },
       {
         name: 'PICO-8 Tunes vol. 1',
         author: 'Gruber and Krajzeg',
         image: '/assets/pico8-assets/pico8_tunes_vol1.p8.png',
-        bbsLink: ''
+        bbsLink: 'https://www.lexaloffle.com/bbs/?pid=38442#p38440'
       },
       {
         name: '9 Songs in PICO-8',
         author: 'Robby Duguay',
         image: '/assets/pico8-assets/9_songs_in_pico8.p8.png',
-        bbsLink: ''
+        bbsLink: 'https://www.lexaloffle.com/bbs/?pid=15487#p16503'
       }
     ],
     emojoData: [
