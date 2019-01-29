@@ -1,7 +1,6 @@
 import React from 'react'
 import { withSiteData } from 'react-static'
 import { Link } from '@reach/router'
-import './index.css'
 
 export default withSiteData(() => (
   <div style={{ textAlign: 'center' }}>

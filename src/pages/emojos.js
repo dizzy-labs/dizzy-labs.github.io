@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { withSiteData } from 'react-static'
 // import { Link } from '@reach/router'
-import './index.css'
 
 const charaEmojo = [
   {
@@ -220,7 +219,7 @@ class EmojosLibrary extends Component {
     const sections = []
     emojoData.forEach((section) => {
       const emojos = section.emojos.map((emojo, index) =>
-        <EmojoCard key={index}
+        <EmojoCard key={emojo.shortcode}
           url={emojo.url}
           alt={emojo.alt}
           shortcode={emojo.shortcode}
@@ -228,18 +227,14 @@ class EmojosLibrary extends Component {
         />
       )
       sections.push((
-        <div>
+        <div key={section.title}>
           <h2>{section.title}</h2>
           {emojos}
         </div>
       ))
     })
 
-    return (
-      <div className='content'>
-        {sections}
-      </div>
-    )
+    return sections
   }
 }
 function EmojoCard (props) {
