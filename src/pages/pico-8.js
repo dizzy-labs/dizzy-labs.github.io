@@ -3,7 +3,7 @@ import { withSiteData } from 'react-static'
 // import { Link } from '@reach/router'
 import './pico8.css'
 
-export default withSiteData(({gamesData}) => (
+export default withSiteData(({ gamesData }) => (
   <GameLibrary games={gamesData} />
 ))
 
@@ -56,10 +56,10 @@ function GameCart (props) {
         src={props.cartImage}
         title={`${props.gameName} by ${props.author}`}
         alt={`${props.gameName} by ${props.author}`} />
-      { (props.bbsLink) ?
-        <a href={props.bbsLink} >
+      { (props.bbsLink)
+        ? <a href={props.bbsLink} >
           Open Pico-8 BBS thread
-        </a> : ""
+        </a> : ''
       }
     </div>
   )
