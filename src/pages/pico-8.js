@@ -3,72 +3,10 @@ import { withSiteData } from 'react-static'
 // import { Link } from '@reach/router'
 import './pico8.css'
 
-const gamesData = [
-  {
-    name: 'Spaceshooter Aleph',
-    author: 'dizzy-labs',
-    image: '/assets/pico8-assets/spaceshooter_aleph.p8.png',
-    bbsLink: ''
-  },
-  {
-    name: 'Slime Factory',
-    author: 'dizzy-labs',
-    image: '/assets/pico8-assets/slime_factory.p8.png',
-    bbsLink: ''
-  },
-  {
-    name: 'Patty Brawl 8',
-    author: 'dizzy-labs',
-    image: '/assets/pico8-assets/pattybrawl8.p8.png',
-    bbsLink: ''
-  },
-  {
-    name: 'Hike',
-    author: 'Solar',
-    image: '/assets/pico8-assets/hike.p8.png',
-    bbsLink: ''
-  },
-  {
-    name: 'Karaoke',
-    author: 'Solar',
-    image: '/assets/pico8-assets/karaoke.p8.png',
-    bbsLink: ''
-  },
-  {
-    name: 'Shodo',
-    author: 'oinariman',
-    image: '/assets/pico8-assets/shodo.p8.png',
-    bbsLink: ''
-  },
-  {
-    name: 'PICO Racer',
-    author: 'Kometbomb',
-    image: '/assets/pico8-assets/pico_racer.p8.png',
-    bbsLink: ''
-  },
-  {
-    name: 'Marballs 2',
-    author: 'Lucatron',
-    image: '/assets/pico8-assets/marballs2.p8.png',
-    bbsLink: ''
-  },
-  {
-    name: 'PICO-8 Tunes vol. 1',
-    author: 'Gruber and Krajzeg',
-    image: '/assets/pico8-assets/pico8_tunes_vol1.p8.png',
-    bbsLink: ''
-  },
-  {
-    name: '9 Songs in PICO-8',
-    author: 'Robby Duguay',
-    image: '/assets/pico8-assets/9_songs_in_pico8.p8.png',
-    bbsLink: ''
-  }
-]
-
-export default withSiteData(() => (
+export default withSiteData(({gamesData}) => (
   <GameLibrary games={gamesData} />
 ))
+
 class GameLibrary extends Component {
   constructor (props) {
     super(props)
