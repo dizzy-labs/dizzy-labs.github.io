@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { withSiteData } from 'react-static'
+import { withRouteData } from 'react-static'
 // import { Link } from '@reach/router'
 
-export default withSiteData(({ emojoData }) => (
+export default withRouteData(({ emojoData }) => (
   <EmojosLibrary emojos={emojoData} />
 ))
 

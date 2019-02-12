@@ -6,7 +6,7 @@ import './app.css'
 
 function App () {
   return (
-    <Root>
+    <Root id='root'>
       {
       /* anything to be on every page goes here
       <nav>
@@ -14,9 +14,7 @@ function App () {
       </nav>
       */
       }
-      <div className='content'>
-        <Routes />
-      </div>
+      <Routes />
     </Root>
   )
 }
