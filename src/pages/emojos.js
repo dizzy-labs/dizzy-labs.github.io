@@ -1,35 +1,36 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { withRouteData } from 'react-static'
-// import { Link } from '@reach/router'
+import { Link } from '@reach/router'
 
 export default withRouteData(({ emojoData }) => (
-  <EmojosLibrary emojos={emojoData} />
+  <React.Fragment>
+    <Link to='/'>Back to Home</Link>
+    {EmojosLibrary(emojoData)}
+  </React.Fragment>
 ))
 
-class EmojosLibrary extends Component {
-  render () {
-    const emojoData = this.props.emojos
-    const sections = []
-    emojoData.forEach((section) => {
-      const emojos = section.emojos.map((emojo, index) =>
-        <EmojoCard key={emojo.shortcode}
-          url={emojo.url}
-          alt={emojo.alt}
-          shortcode={emojo.shortcode}
-          description={emojo.description}
-        />
-      )
-      sections.push((
-        <div key={section.title}>
-          <h2>{section.title}</h2>
-          {emojos}
-        </div>
-      ))
-    })
+function EmojosLibrary (emojoData) {
+  const sections = []
+  emojoData.forEach((section) => {
+    const emojos = section.emojos.map((emojo, index) =>
+      <EmojoCard key={emojo.shortcode}
+        url={emojo.url}
+        alt={emojo.alt}
+        shortcode={emojo.shortcode}
+        description={emojo.description}
+      />
+    )
+    sections.push((
+      <div key={section.title}>
+        <h2>{section.title}</h2>
+        {emojos}
+      </div>
+    ))
+  })
 
-    return sections
-  }
+  return sections
 }
+
 function EmojoCard (props) {
   return (
     <div className='card'>

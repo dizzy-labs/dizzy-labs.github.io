@@ -4,7 +4,10 @@ import { Link } from '@reach/router'
 import './pico8.css'
 
 export default withRouteData(({ gamesData }) => (
-  GameLibrary(gamesData)
+  <React.Fragment>
+    <Link to='/'>Back to Home</Link>
+    {GameLibrary(gamesData)}
+  </React.Fragment>
 ))
 
 function GameLibrary (games) {
