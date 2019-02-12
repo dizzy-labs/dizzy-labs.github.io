@@ -1,7 +1,6 @@
 import React from 'react'
 import { withRouteData } from 'react-static'
 import { Link } from '@reach/router'
-import './pico8.css'
 
 export default withRouteData(({ gamesData }) => (
   <React.Fragment>
@@ -41,17 +40,19 @@ function GameLibrary (games) {
 
 function GameCart (game) {
   return (
-    <Link to={`/pico-8/play/${game.filePrefix}`}
-      className='card card--pico8 clickable'>
-      <img className='card__image card__image--px-art'
-        src={`/assets/pico8-assets/${game.filePrefix}.p8.png`}
-        title={`${game.gameName} by ${game.author}`}
-        alt={`${game.gameName} by ${game.author}`} />
+    <div className='card card--pico8 p8-cart'>
+      <Link className='no-sparkles' to={`/pico-8/play/${game.filePrefix}`}>
+        <img className='card__image p8-cart__image'
+          src={`/assets/pico8-assets/${game.filePrefix}.p8.png`}
+          title={`${game.gameName} by ${game.author}`}
+          alt={`${game.gameName} by ${game.author}`} />
+      </Link>
       { (game.bbsLink)
-        ? <a href={game.bbsLink} >
+        ? <a className='p8-cart__link'
+          href={game.bbsLink} >
           Open Pico-8 BBS thread
         </a> : ''
       }
-    </Link>
+    </div>
   )
 }

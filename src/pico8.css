@@ -2,18 +2,18 @@
 	max-width: 1400px;
 	margin: auto;
 }
-#game-library .card:hover {
+.p8-cart:hover {
 	box-shadow: 0px 1px 16px 6px #2b90d9;
 }
 
-#game-library .card > a {
+.p8-cart__link {
 	position: absolute;
 	margin: .5em;
 	bottom: 0;
 	left: 0;
 	right: 0;
 }
-#game-library .card > img {
+.p8-cart__image {
 	width: calc(160px * 1.5);
 	height: calc(205px * 1.5);
 	image-rendering: pixelated;

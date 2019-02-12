@@ -3,6 +3,7 @@ import { Root, Routes } from 'react-static'
 // import { Link } from '@reach/router'
 
 import './app.css'
+import './pico8.css'
 
 function App () {
   return (

@@ -32,10 +32,10 @@ a:hover,
 a:focus{
 	color: #00e436;
 }
-a:not(.card)::before {
+a:not(.no-sparkles)::before {
 	content: " 💫 ";
 }
-a:not(.card)::after {
+a:not(.no-sparkles)::after {
 	content: " ✨ ";
 }
 
