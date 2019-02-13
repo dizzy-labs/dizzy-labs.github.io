@@ -7,7 +7,7 @@ import './pico8.css'
 
 function App () {
   return (
-    <Root id='root'>
+    <Root className='root'>
       {
       /* anything to be on every page goes here
       <nav>
