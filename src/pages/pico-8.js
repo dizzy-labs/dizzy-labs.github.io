@@ -1,10 +1,10 @@
 import React from 'react'
 import { withRouteData } from 'react-static'
-import { Link } from '@reach/router'
+// import { Link } from '@reach/router'
 
 export default withRouteData(({ gamesData }) => (
   <React.Fragment>
-    <Link to='/'>Back to Home</Link>
+    <a href='/'>Back to Home</a>
     {GameLibrary(gamesData)}
   </React.Fragment>
 ))
@@ -41,12 +41,12 @@ function GameLibrary (games) {
 function GameCart (game) {
   return (
     <div className='card card--pico8 p8-cart'>
-      <Link className='no-sparkles' to={`/pico-8/play/${game.filePrefix}/`}>
+      <a className='no-sparkles' href={`/pico-8/play/${game.filePrefix}/`}>
         <img className='card__image p8-cart__image'
           src={`/assets/pico8-assets/${game.filePrefix}.p8.png`}
           title={`${game.gameName} by ${game.author}`}
           alt={`${game.gameName} by ${game.author}`} />
-      </Link>
+      </a>
       { (game.bbsLink)
         ? <a className='p8-cart__link'
           href={game.bbsLink} >

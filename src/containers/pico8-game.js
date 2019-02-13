@@ -1,15 +1,15 @@
 import React from 'react'
 import {withRouteData} from 'react-static'
-import {Link} from '@reach/router'
+// import {Link} from '@reach/router'
 import './pico8-game.css'
 
 export default withRouteData(({game}) => (
   <div className='flex flex--center-item flex--center-content fill-height fill-width'>
 
     <aside id='game-info' className='flex__auto'>
-      <Link to="/pico-8/">
+      <a href="/pico-8/">
         Back to library
-      </Link>
+      </a>
       <h1>Now Playing</h1>
       <p>
         {game.name}
@@ -28,7 +28,7 @@ export default withRouteData(({game}) => (
             </a> : ''
           }
       </div>
-      
+
     </aside>
 
     <iframe id="p8-player"

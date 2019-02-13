@@ -1,10 +1,10 @@
 import React from 'react'
 import { withRouteData } from 'react-static'
-import { Link } from '@reach/router'
+// import { Link } from '@reach/router'
 
 export default withRouteData(({ emojoData }) => (
   <React.Fragment>
-    <Link to='/'>Back to Home</Link>
+    <a href='/'>Back to Home</a>
     {EmojosLibrary(emojoData)}
   </React.Fragment>
 ))
