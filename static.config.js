@@ -273,6 +273,7 @@ const emojoData = [
 
 export default {
   siteRoot: 'https://dizzy-labs.github.io',
+  basePath: '',
   getSiteData: () => ({
     title: 'Dizzy Directory'
   }),
@@ -280,14 +281,14 @@ export default {
     return [
       {
         path: 'emojos',
-        getData: () => ({emojoData})
+        getData: async () => ({emojoData})
       },
       {
         path: 'pico-8',
-        getData: () => ({gamesData}),
+        getData: async () => ({gamesData}),
         children: gamesData.map(game => ({
           path: `play/${game.filePrefix}`,
-          component: 'src/containers/pico8-game/',
+          component: 'src/containers/pico8-game',
           getData: () => ({game})
         }))
       }

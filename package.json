@@ -11,7 +11,7 @@
     "serve": "serve dist -p 3000",
     "test": "eslint ./src/*.js ./src/pages/*.js",
     "lint": "eslint --fix ./src/*.js ./src/pages/*.js",
-    "predeploy": "yarn test && yarn build",
+    "predeploy": "yarn test && yarn build --debug",
     "deploy": "gh-pages -b master -d dist"
   },
   "dependencies": {
