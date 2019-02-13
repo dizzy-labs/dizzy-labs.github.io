@@ -41,7 +41,7 @@ function GameLibrary (games) {
 function GameCart (game) {
   return (
     <div className='card card--pico8 p8-cart'>
-      <Link className='no-sparkles' to={`/pico-8/play/${game.filePrefix}`}>
+      <Link className='no-sparkles' to={`/pico-8/play/${game.filePrefix}/`}>
         <img className='card__image p8-cart__image'
           src={`/assets/pico8-assets/${game.filePrefix}.p8.png`}
           title={`${game.gameName} by ${game.author}`}
