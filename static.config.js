@@ -272,6 +272,7 @@ const emojoData = [
 ]
 
 export default {
+  siteRoot: 'https://dizzy-labs.github.io',
   getSiteData: () => ({
     title: 'Dizzy Directory'
   }),

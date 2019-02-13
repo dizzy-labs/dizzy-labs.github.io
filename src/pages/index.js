@@ -8,6 +8,8 @@ export default withSiteData(() => (
     <p>In the meantime, here's some links to other more interesting pages:</p>
     <p><Link to='/pico-8'>Play some pico-8 games</Link></p>
     <p><Link to='/emojos'>Look at all of my free emoji</Link></p>
-    <p><Link to='/FishyWords'>Randomly generate some fish</Link></p>
+    {
+      // <p><Link to='/FishyWords'>Randomly generate some fish</Link></p>
+    }
   </div>
 ))
