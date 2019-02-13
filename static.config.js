@@ -279,16 +279,15 @@ export default {
   getRoutes: async () => {
     return [
       {
-        path: '/'
-      }, {
-        path: '/emojos',
+        path: 'emojos',
         getData: () => ({emojoData})
-      }, {
-        path: '/pico-8',
+      },
+      {
+        path: 'pico-8',
         getData: () => ({gamesData}),
         children: gamesData.map(game => ({
-          path: `/play/${game.filePrefix}`,
-          component: 'src/containers/pico8-game',
+          path: `play/${game.filePrefix}`,
+          component: 'src/containers/pico8-game/',
           getData: () => ({game})
         }))
       }
